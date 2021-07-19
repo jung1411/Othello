@@ -1,0 +1,22 @@
+.board {
+    -fx-background-color: #66BB6A;
+}
+
+.gameStatusBarHBox{
+    -fx-background-color: #ffffff;
+}
+
+.dialog{
+    -fx-background-color: #ffffff;;
+}
+
+.title{
+    -fx-font-size: 140%;
+    -fx-font-weight: BOLD;
+}
+
+.body{
+    -fx-text-alignment: left;
+    -fx-alignment: center-left;
+    -fx-tile-alignment: center-left;
+}

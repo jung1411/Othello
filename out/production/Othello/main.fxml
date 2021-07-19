@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane fx:id="root" stylesheets="styles.css" xmlns="http://javafx.com/javafx/8.0.65"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.example.controllers.MainController">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="670.0" minWidth="-Infinity" prefHeight="670.0"
+                prefWidth="600.0">
+
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="670.0" minWidth="-Infinity" prefHeight="670.0"
+              prefWidth="600.0">
+
+            <VBox>
+                <Pane fx:id="gamePane" maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0"
+                      prefHeight="200.0" prefWidth="200.0" styleClass="board" stylesheets="styles.css">
+                </Pane>
+                <HBox styleClass="gameStatusBarHBox">
+                    <ImageView fx:id="image1" fitHeight="40.0" fitWidth="200.0"
+                               pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@black_square.png"/>
+                        </image>
+                        <HBox.margin>
+                            <Insets left="200.0"/>
+                        </HBox.margin>
+                    </ImageView>
+                    <Pane maxHeight="40.0" maxWidth="600.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0"
+                          prefWidth="300.0">
+                        <HBox.margin>
+                            <Insets right="20.0"/>
+                        </HBox.margin>
+                        <Label fx:id="label3" maxHeight="40.0" minHeight="40.0" text="12" textFill="BLACK">
+                            <font>
+                                <Font size="33.0"/>
+                            </font>
+                        </Label>
+                    </Pane>
+                    <Pane layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="600.0"
+                          nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="300.0">
+                        <HBox.margin>
+                            <Insets left="20.0"/>
+                        </HBox.margin>
+                        <Label fx:id="label4" alignment="CENTER_RIGHT" contentDisplay="RIGHT"
+                               maxHeight="40.0" minHeight="40.0" text="12"
+                               textFill="BLACK">
+                            <font>
+                                <Font size="33.0"/>
+                            </font>
+                        </Label>
+                    </Pane>
+                    <ImageView fx:id="image2" fitHeight="40.0" fitWidth="200.0"
+                               pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@white_square.png"/>
+                        </image>
+                        <HBox.margin>
+                            <Insets right="200.0"/>
+                        </HBox.margin>
+                    </ImageView>
+                </HBox>
+            </VBox>
+        </Pane>
+    </AnchorPane>
+    <JFXDialog fx:id="jfxDialog" styleClass="dialog">
+        <JFXDialogLayout>
+            <heading>
+                <Label fx:id="label1" styleClass="title">Game Over</Label>
+            </heading>
+            <body>
+                <Label fx:id="label2" styleClass="body">TEST</Label>
+            </body>
+            <actions>
+                <JFXButton fx:id="button1" >NEW GAME
+                </JFXButton>
+            </actions>
+        </JFXDialogLayout>
+        <StackPane.margin>
+            <Insets/>
+        </StackPane.margin>
+    </JFXDialog>
+</StackPane>
